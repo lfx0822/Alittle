@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.hungry.mapper.DishMapper">
+  	
+  	<!-- 返回所有菜品 -->
+	<select id="getAllList" resultType="Dishes">
+		SELECT * FROM dishes 
+	</select>
+
+  	<!-- 根据ID查询 -->
+	<select id="findById" resultType="Dishes">
+		SELECT * FROM dishes where dishes_id=#{dishes_id}
+	</select>
+	
+		<!-- 搜索查找 -->
+	<select id="findByWord" resultType="Dishes">
+		SELECT * FROM dishes 
+		<where>
+			<if test="word != null and word != ''">
+    			and dishes_name like "%"#{word}"%"
+    			or dishes_describe like "%"#{word}"%"
+			</if>
+		</where>
+	</select>
+	
+	<!-- 根据菜品类型查询 -->
+	<select id="getByType" resultType="Dishes">
+		SELECT * FROM dishes where dishes_cname=#{dishes_cname}
+	</select>
+	
+	<!-- 返回所有菜品类型 -->
+	<select id="getAllCategory" resultType="Dishes_category">
+		SELECT * FROM dishes_category 
+	</select>
+	
+  </mapper>

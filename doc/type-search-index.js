@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"com.hungry.controller","l":"DishController"},{"p":"com.hungry.bean","l":"Dishes"},{"p":"com.hungry.bean","l":"Dishes_category"},{"p":"com.hungry.mapper","l":"DishMapper"},{"p":"com.hungry.service","l":"DishService"},{"p":"com.hungry.service","l":"DishServiceImpl"},{"l":"所有类","url":"allclasses-index.html"}]

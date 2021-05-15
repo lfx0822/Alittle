@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"com.hungry.bean"},{"l":"com.hungry.controller"},{"l":"com.hungry.mapper"},{"l":"com.hungry.service"},{"l":"所有程序包","url":"allpackages-index.html"}]
